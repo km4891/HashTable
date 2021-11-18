@@ -138,4 +138,13 @@ public class Tree {
 		}
 		return successor;
 	}
+
+    private void inOrder(Node localRoot) {
+		if(localRoot != null)
+		{
+			inOrder(localRoot.leftChild);
+			System.out.print(localRoot.data + " ");
+			inOrder(localRoot.rightChild);
+		}
+	}
 }
